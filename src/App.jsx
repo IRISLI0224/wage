@@ -281,27 +281,29 @@ handleDataChange(event) {
 }
 
 cancelAll(event) {
- this.setState({
-  MondayFrom:"0",
-  MondayTo:0,
-  TuesdayFrom:0,
-  TuesdayTo:0,
-  WednesdayFrom:0,
-  WednesdayTo:0,
-  ThursdayFrom:0,
-  ThursdayTo:0,
-  FridayFrom:0,
-  FridayTo:0,
-  SaturdayFrom:0,
-  SaturdayTo:0,
-  SundayFrom:0,
-  SundayTo:0,
-  weekdayHours :0,
-  weekendHours :0,
-  tax :0,
-  total :0,
- })
- console.log(this.state)
+//  this.setState({
+//   MondayFrom:0,
+//   MondayTo:0,
+//   TuesdayFrom:0,
+//   TuesdayTo:0,
+//   WednesdayFrom:0,
+//   WednesdayTo:0,
+//   ThursdayFrom:0,
+//   ThursdayTo:0,
+//   FridayFrom:0,
+//   FridayTo:0,
+//   SaturdayFrom:0,
+//   SaturdayTo:0,
+//   SundayFrom:0,
+//   SundayTo:0,
+//   weekdayHours :0,
+//   weekendHours :0,
+//   tax :0,
+//   total :0,
+//  })
+//  console.log(this.state)
+    window.location.reload()
+    
 }
 
   render(){
@@ -355,7 +357,7 @@ cancelAll(event) {
             <DayTr>
             <div>Monday</div>
             <TdFrom>
-              <DropdownBox name="MondayFrom"  onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="MondayFrom" value={MondayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
               <DropdownBox name="MondayTo" onChange={this.handleDataChange}></DropdownBox>
