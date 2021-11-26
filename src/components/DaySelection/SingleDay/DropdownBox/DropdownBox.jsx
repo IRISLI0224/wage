@@ -16,7 +16,7 @@ const Select = styled.select.attrs({
 const DropdownBox = ({onChange,name}) => (
 
   <Select onChange={onChange} name={name}>
-      <option></option>
+      <option value="0"></option>
       <option value="9">9:00</option>
       <option value="10">10:00</option>
       <option value="11">11:00</option>

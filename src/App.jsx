@@ -235,6 +235,7 @@ class App extends React.Component {
   }
   this.handleDataChange = this.handleDataChange.bind(this);
   this.calculate = this.calculate.bind(this);
+  this.cancelAll = this.cancelAll.bind(this);
 }
 
 
@@ -279,39 +280,62 @@ handleDataChange(event) {
   });
 }
 
+cancelAll(event) {
+ this.setState({
+  MondayFrom:"0",
+  MondayTo:0,
+  TuesdayFrom:0,
+  TuesdayTo:0,
+  WednesdayFrom:0,
+  WednesdayTo:0,
+  ThursdayFrom:0,
+  ThursdayTo:0,
+  FridayFrom:0,
+  FridayTo:0,
+  SaturdayFrom:0,
+  SaturdayTo:0,
+  SundayFrom:0,
+  SundayTo:0,
+  weekdayHours :0,
+  weekendHours :0,
+  tax :0,
+  total :0,
+ })
+ console.log(this.state)
+}
 
   render(){
-    const { weekdayHours,weekendHours,total } = this.state;
+    const { weekdayHours,weekendHours,total,MondayFrom } = this.state;
   return (
     <>
     <Container>
     <Top>
-      <OrderListingTitle>Add roster</OrderListingTitle>
+      <OrderListingTitle name="OrderTitle">Add roster</OrderListingTitle>
       <GreyLine1Px/>
     </Top>
     <Mid>
       <LeftPanel>
-      <Width50PxTextStrong>6</Width50PxTextStrong>
+      <Width50PxTextStrong name="Width50PxTextStrong">6</Width50PxTextStrong>
       <table>
         <tbody>
           <tr>
-            <LeftTd>
+            <LeftTd name="StartdDateTitle">
               Start date
             </LeftTd>
-            <LeftTd>
+            <LeftTd name="EndDateTitle">
               End date
             </LeftTd>
           </tr>
           <tr>
             <LeftTd>
-              <CalendarSelection>&nbsp;&nbsp;23-Aug-2019</CalendarSelection>
+              <CalendarSelection name="StartdDate">&nbsp;&nbsp;23-Aug-2019</CalendarSelection>
             </LeftTd>
             <LeftTd>
-              <CalendarSelection>&nbsp;&nbsp;17-Aug-2020</CalendarSelection>
+              <CalendarSelection name="EndDate">&nbsp;&nbsp;17-Aug-2020</CalendarSelection>
             </LeftTd>
           </tr>
           <tr>
-            <div>Wage calculator by Iris Liang</div>
+            <div name="Author">Wage calculator by Iris Liang</div>
           </tr>
         </tbody>
       </table>
@@ -321,8 +345,8 @@ handleDataChange(event) {
          <tbody>
            <tr>
              <Td />
-             <TdFrom >From</TdFrom>
-             <TdTo>To</TdTo>
+             <TdFrom name="FromTitle">From</TdFrom>
+             <TdTo name="ToTitle">To</TdTo>
           </tr>
          </tbody>
         </table>
@@ -331,7 +355,7 @@ handleDataChange(event) {
             <DayTr>
             <div>Monday</div>
             <TdFrom>
-              <DropdownBox name="MondayFrom" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="MondayFrom" value="0" onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
               <DropdownBox name="MondayTo" onChange={this.handleDataChange}></DropdownBox>
@@ -432,8 +456,8 @@ handleDataChange(event) {
     <GreyLine1Px/>
     <Bottom>
       
-      <SaveButton onClick={this.calculate} >Calculate</SaveButton>
-      <CancelButton>Cancel</CancelButton>
+      <SaveButton onClick={this.calculate} name="SaveButton">Calculate</SaveButton>
+      <CancelButton name="CancelButton"onClick={this.cancelAll} >Cancel</CancelButton>
     </Bottom>
     </Container>
     </>
