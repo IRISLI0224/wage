@@ -355,7 +355,7 @@ cancelAll(event) {
             <DayTr>
             <div>Monday</div>
             <TdFrom>
-              <DropdownBox name="MondayFrom" value="0" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="MondayFrom"  onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
               <DropdownBox name="MondayTo" onChange={this.handleDataChange}></DropdownBox>
