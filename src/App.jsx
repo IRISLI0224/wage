@@ -310,6 +310,9 @@ handleDataChange(event) {
               <CalendarSelection>&nbsp;&nbsp;17-Aug-2020</CalendarSelection>
             </LeftTd>
           </tr>
+          <tr>
+            <div>Wage calculator by Iris Liang</div>
+          </tr>
         </tbody>
       </table>
       </LeftPanel>
