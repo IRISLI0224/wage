@@ -281,33 +281,48 @@ handleDataChange(event) {
 }
 
 cancelAll(event) {
-//  this.setState({
-//   MondayFrom:0,
-//   MondayTo:0,
-//   TuesdayFrom:0,
-//   TuesdayTo:0,
-//   WednesdayFrom:0,
-//   WednesdayTo:0,
-//   ThursdayFrom:0,
-//   ThursdayTo:0,
-//   FridayFrom:0,
-//   FridayTo:0,
-//   SaturdayFrom:0,
-//   SaturdayTo:0,
-//   SundayFrom:0,
-//   SundayTo:0,
-//   weekdayHours :0,
-//   weekendHours :0,
-//   tax :0,
-//   total :0,
-//  })
-//  console.log(this.state)
-    window.location.reload()
+ this.setState({
+  MondayFrom:'0',
+  MondayTo:'0',
+  TuesdayFrom:'0',
+  TuesdayTo:'0',
+  WednesdayFrom:'0',
+  WednesdayTo:'0',
+  ThursdayFrom:'0',
+  ThursdayTo:'0',
+  FridayFrom:'0',
+  FridayTo:'0',
+  SaturdayFrom:'0',
+  SaturdayTo:'0',
+  SundayFrom:'0',
+  SundayTo:'0',
+  weekdayHours :'0',
+  weekendHours :'0',
+  tax :'0',
+  total :'0',
+ })
+ //console.log(this.state)
+   // window.location.reload()
     
 }
 
   render(){
-    const { weekdayHours,weekendHours,total,MondayFrom } = this.state;
+  
+    const { weekdayHours,weekendHours,total,
+      MondayFrom,
+      MondayTo,
+      TuesdayFrom,
+      TuesdayTo,
+      WednesdayFrom,
+      WednesdayTo,
+      ThursdayFrom,
+      ThursdayTo,
+      FridayFrom,
+      FridayTo,
+      SaturdayFrom,
+      SaturdayTo,
+      SundayFrom,
+      SundayTo} = this.state;
   return (
     <>
     <Container>
@@ -360,67 +375,67 @@ cancelAll(event) {
               <DropdownBox name="MondayFrom" value={MondayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
-              <DropdownBox name="MondayTo" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="MondayTo" value={ MondayTo } onChange={this.handleDataChange}></DropdownBox>
             </TdTo>
             </DayTr>
 
             <DayTr>
             <div>Tuesday</div>
             <TdFrom>
-              <DropdownBox name="TuesdayFrom" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="TuesdayFrom" value={TuesdayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
-              <DropdownBox name="TuesdayTo" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="TuesdayTo" value={TuesdayTo} onChange={this.handleDataChange}></DropdownBox>
             </TdTo>
             </DayTr>
 
             <DayTr>
             <div>Wednesday</div>
             <TdFrom>
-              <DropdownBox name="WednesdayFrom" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="WednesdayFrom" value={WednesdayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
-              <DropdownBox name="WednesdayTo" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="WednesdayTo" value={WednesdayTo} onChange={this.handleDataChange}></DropdownBox>
             </TdTo>
             </DayTr>
 
             <DayTr>
             <div>Thursday</div>
             <TdFrom>
-              <DropdownBox name="ThursdayFrom" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="ThursdayFrom" value={ThursdayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
-              <DropdownBox name="ThursdayTo" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="ThursdayTo" value={ThursdayTo} onChange={this.handleDataChange}></DropdownBox>
             </TdTo>
             </DayTr>
 
             <DayTr>
             <div>Friday</div>
             <TdFrom>
-              <DropdownBox name="FridayFrom" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="FridayFrom" value={FridayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
-              <DropdownBox name="FridayTo" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="FridayTo" value={FridayTo} onChange={this.handleDataChange}></DropdownBox>
             </TdTo>
             </DayTr>
 
             <DayTr>
             <div>Saturday</div>
             <TdFrom>
-              <DropdownBox name="SaturdayFrom" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="SaturdayFrom" value={SaturdayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
-              <DropdownBox name="SaturdayTo" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="SaturdayTo" value={SaturdayTo} onChange={this.handleDataChange}></DropdownBox>
             </TdTo>
             </DayTr>
 
             <DayTr>
             <div>Sunday</div>
             <TdFrom>
-              <DropdownBox name="SundayFrom" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="SundayFrom" value={SundayFrom} onChange={this.handleDataChange}></DropdownBox>
             </TdFrom>
             <TdTo>
-              <DropdownBox name="SundayTo" onChange={this.handleDataChange}></DropdownBox>
+              <DropdownBox name="SundayTo" value={SundayTo} onChange={this.handleDataChange}></DropdownBox>
             </TdTo>
             </DayTr>
           </tbody>
