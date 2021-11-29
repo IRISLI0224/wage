@@ -169,7 +169,6 @@ const TaxInput = styled.input.attrs({
   height: 20px;
   padding: 5px;
   width: 20px;
-  height:15px;
   type:text;
   border:none;
   float:right;
@@ -322,7 +321,8 @@ cancelAll(event) {
       SaturdayFrom,
       SaturdayTo,
       SundayFrom,
-      SundayTo} = this.state;
+      SundayTo,
+      tax} = this.state;
   return (
     <>
     <Container>
@@ -458,6 +458,7 @@ cancelAll(event) {
               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</div>
               <TaxInput 
                 name="tax" 
+                value={tax}
                 onChange={this.handleDataChange}
               />
             </CalculateTax>
